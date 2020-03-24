@@ -1,0 +1,78 @@
+footer {
+    background-color: aliceblue;
+    color: green;
+    font-family: sans-serif;
+    font-size: 15px;
+    width: 50%;
+    text-align: center;
+}
+
+#title {
+    text-align: center;
+}
+
+.tabHead {
+    font-weight: lighter;
+}
+
+table, th, td {
+    border: 1px;
+    border-style: solid;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+}
+
+.tab {
+    text-align: left;
+    border-collapse: collapse;
+    width: 70%;
+    padding: 50;
+}
+
+#pierwszy {
+    background-color: bisque;
+    width: 75%;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    padding-bottom: 2%;
+    padding-top: 2%;
+}
+
+#drugi {
+    background-color: darkmagenta;
+    width: 75%;
+    color: darksalmon;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    padding-bottom: 2%;
+    padding-top: 2%;
+}
+
+#super {
+    background-color: orange;
+    position: absolute;
+    width: 200px;
+    left: 20px;
+    top: 400px;
+}
+
+#logo {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    left: 0px;
+    top: 0px;
+}
+
+.im {
+    width: 200px;
+    height: auto;
+}
+
+#sam {
+    width: 200px;
+    height: auto;
+}
