@@ -53,10 +53,10 @@ th, td {
 
 #super {
     background-color: orange;
-    position: absolute;
+    position: relative;
     width: 200px;
     left: 20px;
-    top: 400px;
+    top: -70px;
 }
 
 #logo {
@@ -75,4 +75,43 @@ th, td {
 #sam {
     width: 200px;
     height: auto;
+}
+
+.menu {
+    list-style: none;
+    margin-left: 8px;
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.navig {
+    list-style: none;
+    margin-left: 8px;
+    text-transform: uppercase;
+}
+
+.late {
+    background-color: yellow;
+}
+
+.very_late {
+    background-color: orange;
+}
+
+.canceled {
+    background-color: red;
+}
+
+.col-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none; 
+  color: black;
 }

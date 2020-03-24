@@ -8,96 +8,104 @@
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
 </head>
-<body style="text-align: center">
-    <h1>
-        <p id='title'>Lista Lotów</p>
-    </h1>
-    <p id="pierwszy">Tablica poniżej</p>
-    <p id="drugi">Jeszcze pod tym</p>
-    <div id='tab_start'>
-        <table class='tab'>
-            <thead class='tabHead'>
-                <tr>
-                    <th>nr</th>
-                    <th>skąd</th>
-                    <th>dokąd</th>
-                    <th>data</th>
-                    <th>godzina</th>
-                    <th>odnośniki</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Warszawa</td>
-                    <td>Londyn</td>
-                    <td>11.03.2020</td>
-                    <td>11:54</td>
-                    <td><a href="warszawa_londyn.html">zobacz</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Warszawa</td>
-                    <td>Madryt</td>
-                    <td>12.03.2020</td>
-                    <td>05:20</td>
-                    <td><a href="">brak</td>
-                </tr>
-            </tbody>
-        </table>
+<body style="text-align: center; display: flex; flex-direction: column;">
+    <div class="col-flex">
+        <nav style="margin-top: 200px;">
+            <header><h2>Menu</h2></header>
+            <ul class="menu">
+                <li>
+                    <p>Odnośniki</p>
+                    <!--TODO linki się podkreślają-->
+                    <ul class="navig">
+                        <li><a href="#title">Lista lotów - początek</a></li>
+                        <li><a href="#tab_start">Lista lotów - lista</a></li>
+                        <li><a href="" text-decoration="none !important">Nasze samoloty</a></li>
+                        <li><a href="">Z kąd latamy?</a></li>
+                        <li><a href="">Gdzie latamy?</a></li>
+                        <li><a href="">O nas</a></li>
+                        <li><a href="">Oferty pracy</a></li>
+                        <li><a href="warszawa_londyn.html">Losowy lot</a></li>
+                    </ul>
+                </li>
+                <li><p>Inne</p></li>
+            </ul>
+        </nav>
+        <main>
+            <h1>
+                <p id='title'>Lista Lotów</p>
+            </h1>
+            <p id="pierwszy">Tablica poniżej</p>
+            <p id="drugi">Jeszcze pod tym</p>
+            <div id='tab_start'>
+                <table class='tab'>
+                    <thead class='tabHead'>
+                        <tr>
+                            <th>nr</th>
+                            <th>skąd</th>
+                            <th>dokąd</th>
+                            <th>data</th>
+                            <th>godzina</th>
+                            <th>odnośniki</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Warszawa</td>
+                            <td>Londyn</td>
+                            <td>11.03.2020</td>
+                            <td>11:54</td>
+                            <td><a href="warszawa_londyn.html">zobacz</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Warszawa</td>
+                            <td>Madryt</td>
+                            <td>12.03.2020</td>
+                            <td>05:20</td>
+                            <td><a href="">brak</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p id="super">Ale super lot</p>
+            <img id="logo" src="src/logo firmy.png" alt="logo firmy">
+        </main>
+        <div>
+            <h2>Opóźnienia</h2>
+            <div>
+            <table class='tab'>
+                <thead class='tabHead'>
+                    <tr>
+                        <th>skąd</th>
+                        <th>dokąd</th>
+                        <th>opóźnienie</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="very_late">
+                        <td>Warszawa</td>
+                        <td>Londyn</td>
+                        <td>5h</td>
+                    </tr>
+                    <tr class="late">
+                        <td>Warszawa</td>
+                        <td>Madryt</td>
+                        <td>3,5h</td>
+                    </tr>
+                    <tr class="canceled">
+                        <td>Warszawa</td>
+                        <td>Barcelona</td>
+                        <td>ODWOŁANY</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        </div>
     </div>
-    <p id="super">Ale super lot</p>
-    <img id="logo" src="src/logo firmy.png" alt="logo firmy">
-    <nav>
-        <header>Menu</header>
-        <ul>
-            <li>
-                <p>Odnośniki</p>
-                <ul>
-                    <li><a href="#title">Lista lotów - początek</a></li>
-                    <li><a href="#tab_start">Lista lotów - lista</a></li>
-                    <li><a href="">Nasze samoloty</a></li>
-                    <li><a href="">Z kąd latamy?</a></li>
-                    <li><a href="">Gdzie latamy?</a></li>
-                    <li><a href="">O nas</a></li>
-                    <li><a href="">Oferty pracy</a></li>
-                    <li><a href="warszawa_londyn.html">Losowy lot</a></li>
-                </ul>
-            </li>
-            <li><p>Inne</p></li>
-        </ul>
-    </nav>
-    <h2>Opóźnienia</h2>
-    <div>
-        <table class='tab'>
-            <thead class='tabHead'>
-                <tr>
-                    <th>skąd</th>
-                    <th>dokąd</th>
-                    <th>opóźnienie</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Warszawa</td>
-                    <td>Londyn</td>
-                    <td>5h</td>
-                </tr>
-                <tr>
-                    <td>Warszawa</td>
-                    <td>Madryt</td>
-                    <td>3,5h</td>
-                </tr>
-                <tr>
-                    <td>Warszawa</td>
-                    <td>Barcelona</td>
-                    <td>ODWOŁANY</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    <footer>
+        <p>Grzegorz Kwiatkowski</p>
+    </footer>
 </body>
-<footer>
-    <p>Grzegorz Kwiatkowski</p>
-</footer>
+
 </html>
