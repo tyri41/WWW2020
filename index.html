@@ -73,7 +73,6 @@
         </main>
         <div>
             <h2>Opóźnienia</h2>
-            <div>
             <table class='tab'>
                 <thead class='tabHead'>
                     <tr>
@@ -100,7 +99,43 @@
                     </tr>
                 </tbody>
             </table>
-        </div>
+            <div style="text-align: left;">
+                <h3>Nowa rezerwacja</h3>
+                <div style="display: flex;">
+                    <div>
+                        <div>skąd?</div>
+                        <select>
+                            <option value="warszawa">Warszawa</option>
+                        </select>
+                    </div>
+                    <div style="margin-left: 8px;">
+                        <div>dokąd?</div>
+                        <select>
+                            <option value="londyn">Londyn</option>
+                            <option value="barcelona">Barcelona</option>
+                            <option value="madryt">Madryt</option>
+                        </select>
+                    </div>
+                    <div style="margin-left: 8px;">
+                        <div>data lotu</div>
+                        <input id="date_form" type="date">
+                    </div>
+                </div>
+                <div style="display: flex; margin-top: 10px;">
+                    <div>
+                        <div>Imię</div>
+                        <input type="text" size="15">
+                    </div>
+                    <div style="margin-left: 8px;">
+                        <div>Nazwisko</div>
+                        <input type="text" size="15">
+                    </div>
+                </div>
+                <div style="display: flex; margin-top: 10px; justify-content: space-evenly;">
+                    <input type="button" value="Wyślij">
+                    <input type="button" value="Wyczyść">
+                </div>
+            </div>
         </div>
     </div>
     <footer>

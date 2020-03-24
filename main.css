@@ -115,3 +115,7 @@ a:active {
   text-decoration: none; 
   color: black;
 }
+
+#date_form {
+    width: 130px;
+}
