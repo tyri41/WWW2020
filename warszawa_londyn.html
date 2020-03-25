@@ -7,6 +7,9 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
+    <style>
+        li:nth-child(odd) { background-color: lightgray; }
+    </style>
 </head>
 <body>
     <h1>Lot nr 1</h1>
@@ -27,15 +30,45 @@
     <div>
         <p>Czas lotu to 3 godziny, samolot zabiera 100 pasażerów.</p>
         <p>Lot samolotem Boeing 737</p>
-        <img id="sam" src="src/sam.jpg">
+        <img id="sam" src="src/sam.jpg" alt="samolot">
     </div>
     <div>
         <!-- kolumny: nr lotu, skąd, dokąd, data, godzina; tabelka z nagłówkami -->
         <p>Lista pasażerów:</p>
-        <ul class='tab' style="width: 200px;">
-            <li>Jan</li>
-            <li>Stefan</li>
-            <li>Bartłomiej</li>
+        <ul class='tab list'>
+            <li>
+                <div class="tooltip">Jan
+                <span class="tooltiptext">siedzenie nr 2</span>
+                </div>
+            </li>
+            <li>
+                <div class="tooltip">Stefan
+                <span class="tooltiptext">siedzenie nr 1</span>
+                </div>
+            </li>
+            <li>
+                <div class="tooltip">Halina
+                <span class="tooltiptext">siedzenie nr 11</span>
+                </div>
+            </li>
+            <li>
+                <div class="tooltip">Eugeniusz
+                <span class="tooltiptext">siedzenie nr 12</span>
+                </div>
+            </li>
+            <li>
+                <div class="tooltip">Irena
+                <span class="tooltiptext">siedzenie nr 8</span>
+                </div>
+            </li>
+            <li>
+                <div class="tooltip">Jakub
+                <span class="tooltiptext">siedzenie nr 5</span>
+                </div>
+            </li>
+              <li><div class="tooltip">Antoni
+                <span class="tooltiptext">siedzenie nr 16</span>
+              </div></li>
         </ul>
     </div>
 </body>

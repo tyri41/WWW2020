@@ -126,6 +126,34 @@ a:active {
     flex-direction: column;
 }
 
+.list {
+    width: 200px;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+  
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 135px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 3px;
+    padding: 5px 0;
+    position: absolute;
+    bottom: 100%;
+    left: 40px;
+    opacity: 0;
+}
+  
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
 @media only screen and (max-width: 768px) {
     .col-flex {
         flex-direction: column;
