@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Lista Lotów</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body class="body-class">
+    <div class="obscurer"><h1 style="font-size:40px;">Rezerwacja się powiodła<h1><a href="index.html" ><h3 style="color: white">powrót?<h3></a></div>
+    <div class="col-flex">
+        <nav class="navbar">
+            <header><h2>Menu</h2></header>
+            <ul class="menu">
+                <li>
+                    <p>Odnośniki</p>
+                    <!--TODO linki się podkreślają-->
+                    <ul class="navig">
+                        <li><a href="#title">Lista lotów - początek</a></li>
+                        <li><a href="#tab_start">Lista lotów - lista</a></li>
+                        <li><a href="">Nasze samoloty</a></li>
+                        <li><a href="">Z kąd latamy?</a></li>
+                        <li><a href="">Gdzie latamy?</a></li>
+                        <li><a href="">O nas</a></li>
+                        <li><a href="">Oferty pracy</a></li>
+                        <li><a href="warszawa_londyn.html">Losowy lot</a></li>
+                    </ul>
+                </li>
+                <li><p>Inne</p></li>
+            </ul>
+        </nav>
+        <main>
+            <h1 id='title'>Lista Lotów</h1>
+            <p id="pierwszy">Tablica poniżej</p>
+            <p id="drugi">Jeszcze pod tym</p>
+            <div id='tab_start'>
+                <table class='tab'>
+                    <thead class='tabHead'>
+                        <tr>
+                            <th>nr</th>
+                            <th>skąd</th>
+                            <th>dokąd</th>
+                            <th>data</th>
+                            <th>godzina</th>
+                            <th>odnośniki</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Warszawa</td>
+                            <td>Londyn</td>
+                            <td>11.03.2020</td>
+                            <td>11:54</td>
+                            <td><a href="warszawa_londyn.html">zobacz</a></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Warszawa</td>
+                            <td>Madryt</td>
+                            <td>12.03.2020</td>
+                            <td>05:20</td>
+                            <td><a href="">brak</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            <p id="super">Ale super lot</p>
+            </div>
+            <img id="logo" src="src/logo_firmy.png" alt="logo firmy">
+        </main>
+        <div class="sidebar">
+            <h2>Opóźnienia</h2>
+            <table class='tab'>
+                <thead class='tabHead'>
+                    <tr>
+                        <th>skąd</th>
+                        <th>dokąd</th>
+                        <th>opóźnienie</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="very_late">
+                        <td>Warszawa</td>
+                        <td>Londyn</td>
+                        <td>5h</td>
+                    </tr>
+                    <tr class="late">
+                        <td>Warszawa</td>
+                        <td>Madryt</td>
+                        <td>3,5h</td>
+                    </tr>
+                    <tr class="canceled">
+                        <td>Warszawa</td>
+                        <td>Barcelona</td>
+                        <td>ODWOŁANY</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div style="text-align: left;">
+                <h3>Nowa rezerwacja</h3>
+                <div style="display: flex;">
+                    <div>
+                        <div>skąd?</div>
+                        <select>
+                            <option value="warszawa">Warszawa</option>
+                        </select>
+                    </div>
+                    <div style="margin-left: 8px;">
+                        <div>dokąd?</div>
+                        <select>
+                            <option value="londyn">Londyn</option>
+                            <option value="barcelona">Barcelona</option>
+                            <option value="madryt">Madryt</option>
+                        </select>
+                    </div>
+                    <div style="margin-left: 8px;">
+                        <div>data lotu</div>
+                        <input id="date_form" type="date">
+                    </div>
+                </div>
+                <div style="display: flex; margin-top: 10px;">
+                    <div>
+                        <div>Imię</div>
+                        <input type="text" size="15">
+                    </div>
+                    <div style="margin-left: 8px;">
+                        <div>Nazwisko</div>
+                        <input type="text" size="15">
+                    </div>
+                </div>
+                <div style="display: flex; margin-top: 10px; justify-content: space-evenly;">
+                    <input type="button" value="Wyślij">
+                    <input type="button" value="Wyczyść">
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>Grzegorz Kwiatkowski</p>
+        </footer>
+    </div>
+</body>
+
+</html>
