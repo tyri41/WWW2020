@@ -6,7 +6,7 @@
     <title>Lista Lotów</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <script src='scripts/main.js'></script>
 </head>
 <body class="body-class">
     <div class="col-flex">
@@ -130,15 +130,25 @@
                     </div>
                 </div>
                 <div style="display: flex; margin-top: 10px; justify-content: space-evenly;">
-                    <input type="button" value="Wyślij">
+                    <input type="submit" value="Wyślij">
                     <input type="button" value="Wyczyść">
                 </div>
             </div>
+            <div><img id="ts_avatar" class="im"></div>
         </div>
         <footer>
             <p>Grzegorz Kwiatkowski</p>
         </footer>
     </div>
+<script>
+    setTimeout(() => {
+        console.log("No wreszcie.");
+    }, 2000);
+    teczoweKolory(document.getElementsByClassName("body-class")[0]);
+    let el = document.getElementById("ts_avatar");
+    // console.log(el);
+    getTSAvatar(el);
+</script>
 </body>
 
 </html>
