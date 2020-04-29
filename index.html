@@ -7,6 +7,13 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='scripts/main.js'></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            document.getElementById("name_form").value = 'Stefan';
+            document.getElementById("surname_form").value = 'Batory';
+            document.getElementById("bSubmit").style.visibility = 'hidden';
+        });
+    </script>
 </head>
 <body class="body-class">
     <div class="col-flex">
@@ -69,7 +76,7 @@
             </div>
             <img id="logo" src="src/logo_firmy.png" alt="logo firmy">
         </main>
-        <div class="sidebar">
+        <div class="sidebar" onclick="swapColor(document.getElementsByClassName('sidebar')[0])">
             <h2>Opóźnienia</h2>
             <table class='tab'>
                 <thead class='tabHead'>
@@ -102,13 +109,13 @@
                 <div style="display: flex;">
                     <div>
                         <div>skąd?</div>
-                        <select>
+                        <select id='sFrom'>
                             <option value="warszawa">Warszawa</option>
                         </select>
                     </div>
                     <div style="margin-left: 8px;">
                         <div>dokąd?</div>
-                        <select>
+                        <select id='sTo'>
                             <option value="londyn">Londyn</option>
                             <option value="barcelona">Barcelona</option>
                             <option value="madryt">Madryt</option>
@@ -116,21 +123,21 @@
                     </div>
                     <div style="margin-left: 8px;">
                         <div>data lotu</div>
-                        <input id="date_form" type="date">
+                        <input id="date_form" type="date" oninput="checkSubmit()">
                     </div>
                 </div>
                 <div style="display: flex; margin-top: 10px;">
                     <div>
                         <div>Imię</div>
-                        <input type="text" size="15">
+                        <input id="name_form" type="text" size="15" oninput="checkSubmit()">
                     </div>
                     <div style="margin-left: 8px;">
                         <div>Nazwisko</div>
-                        <input type="text" size="15">
+                        <input id="surname_form" type="text" size="15" oninput="checkSubmit()">
                     </div>
                 </div>
                 <div style="display: flex; margin-top: 10px; justify-content: space-evenly;">
-                    <input type="submit" value="Wyślij">
+                    <input id="bSubmit" type="submit" value="Wyślij">
                     <input type="button" value="Wyczyść">
                 </div>
             </div>
@@ -140,14 +147,44 @@
             <p>Grzegorz Kwiatkowski</p>
         </footer>
     </div>
+    <div id="rezModal" class="modal">
+        <div class="modal-content">
+            <span>Nowa rezerwacja:</span>
+            <span id='close_rez' class="close">&times;</span>
+            <p id='rezMessage'></p>
+        </div>
+    </div>
 <script>
     setTimeout(() => {
         console.log("No wreszcie.");
     }, 2000);
     teczoweKolory(document.getElementsByClassName("body-class")[0]);
-    let el = document.getElementById("ts_avatar");
-    // console.log(el);
-    getTSAvatar(el);
+    getTSAvatar(document.getElementById("ts_avatar"));
+
+    let name = document.getElementById('name_form');
+    let surname = document.getElementById('surname_form');
+    function checkNames() {
+        return (name.value != '') && (name.value != '');
+    }
+    let date = document.getElementById('date_form');
+    function checkTime() {
+        return date.valueAsNumber > Date.now();
+    }
+    let bSubmit = document.getElementById('bSubmit');
+    function checkSubmit() {
+        if(checkNames() && checkTime()) bSubmit.style.visibility = 'visible';
+        else bSubmit.style.visibility = 'hidden';
+    }
+    let rezModal = document.getElementById('rezModal');
+    let rezMessage = document.getElementById('rezMessage');
+    let sFrom = document.getElementById('sFrom');
+    let sTo = document.getElementById('sTo');
+    bSubmit.onclick = function() {
+        console.log("kappa");
+        rezMessage.textContent = "Z " + sFrom.value + " do " + sTo.value + " dnia " + date.value + " na nazwisko " + name.value + " " + surname.value; 
+        rezModal.style.display = 'block';
+    }
+    document.getElementById('close_rez').onclick = function() { rezModal.style.display = 'none'; }
 </script>
 </body>
 

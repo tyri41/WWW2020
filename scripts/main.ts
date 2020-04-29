@@ -33,3 +33,32 @@ function getTSAvatar(el) {
         console.log(data);
     });
 }
+let clicks = 0;
+function swapColor(el) {
+    clicks++;
+    get10iFib(clicks);
+    let color = el.style.backgroundColor;
+    let newColor;
+    do {
+        newColor = colors[Math.floor(Math.random() * colors.length)];
+    } while(color == newColor);
+    console.log(color + " -> " + newColor);
+    el.style.backgroundColor = newColor;
+}
+
+let fibs = [];
+
+fibs[0] = 0;
+fibs[1] = 1;
+// console.log(fibs);
+function getFib(x: number) {
+    if(fibs[x] == null) {
+        fibs[x] = getFib(x-1) + getFib(x-2);
+        // console.log(x + " " + fibs[x]);
+    }
+    return fibs[x];
+}
+
+function get10iFib(x: number) {
+    return getFib(10*x);
+}
